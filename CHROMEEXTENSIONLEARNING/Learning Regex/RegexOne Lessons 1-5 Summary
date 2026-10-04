@@ -1,0 +1,50 @@
+
+LESSON 1: Literal Character Matching
+- Rule: Characters match themselves exactly.
+- Logic: Typing the characters 'abc' will only match the precise sequence 
+  of letters 'a', 'b', and 'c' in order.
+- Application: To search for the word "Miko", your base regex pattern is 
+  simply: Miko
+
+------------------------------------------------------------------------------------------------
+
+LESSON 2: The Wildcard Dot (.) and The Escape Character (\)
+- Rule 1: A plain dot (.) acts as a wildcard shape-shifter. It matches 
+  ANY single character (letters, numbers, spaces, or symbols).
+- Rule 2: A backslash (\) is a superpower switch that turns off wildcards.
+- Logic: 
+  - The pattern '.' matches 'a', '9', or '!'.
+  - The pattern '\.' turns off the wildcard power to match a literal period.
+- Application: To match words like 'cat.', '896.', and '?=+' but skip 'abc1', 
+  the pattern is: ...\.  (Three wildcards followed by a mandatory literal dot).
+
+------------------------------------------------------------------------------------------------
+
+LESSON 3: Character Classes [abc]
+- Rule: Square brackets define a custom list of allowed characters. 
+  It matches exactly ONE character, but it can be any letter inside the box.
+- Logic: The pattern '[cb]at' matches 'cat' and 'bat', but completely skips 'rat'.
+- Application: Allows you to accept slight spelling variations in a search query.
+
+------------------------------------------------------------------------------------------------
+
+LESSON 4: Excluded Characters [^abc]
+- Rule: Putting a hat/caret symbol (^) inside square brackets reverses the rule. 
+  It means "match any single character EXCEPT the ones listed in here."
+- Logic: The pattern '[^c]at' will match 'bat' and 'rat', but will completely 
+  block and skip 'cat'.
+- Application: Crucial for security filters when you want to block unauthorized 
+  symbols from entering your backend.
+
+------------------------------------------------------------------------------------------------
+
+LESSON 5: Character Ranges [a-z] and [0-9]
+- Rule: A dash (-) inside square brackets sets a sequential range shortcut so 
+  you do not have to type every letter or number out manually.
+- Logic: 
+  - [a-z] matches any lowercase letter.
+  - [A-Z] matches any uppercase letter.
+  - [0-9] matches any single numerical digit.
+- Shortcuts:
+  - \d is a built-in shortcut for any numerical digit [0-9].
+  - \w is a shortcut for any alphanumeric word character (letters/numbers).
