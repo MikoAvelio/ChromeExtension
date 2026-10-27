@@ -1,4 +1,4 @@
-
+<!-- 
 LESSON 1: Literal Character Matching
 - Rule: Characters match themselves exactly.
 - Logic: Typing the characters 'abc' will only match the precise sequence 
@@ -47,4 +47,4 @@ LESSON 5: Character Ranges [a-z] and [0-9]
   - [0-9] matches any single numerical digit.
 - Shortcuts:
   - \d is a built-in shortcut for any numerical digit [0-9].
-  - \w is a shortcut for any alphanumeric word character (letters/numbers).
+  - \w is a shortcut for any alphanumeric word character (letters/numbers). -->

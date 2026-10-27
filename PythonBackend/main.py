@@ -1,17 +1,26 @@
+from flask import Flask, request, jsonify
 import re
 
-data = "My Personal Project" #Just an example string later on it will be pulled from my JSON file.
+app = Flask(__name__)
 
-user_query = input("Enter a keyword(s): ")
-advanced_search = input("Do you want to use advanced search? (Yes/No): ").lower() == "yes" #This will also be connected to my frontend later on
+datapool = "My Personal Project?" #Just an example string later on it will be pulled from my JSON file.
 
-if not advanced_search:
-  search = re.escape(user_query)
-else:
-  search = user_query
+@app.route("/search", methods=['POST'])
+def search_engine():
+  payload = request.get_json()
+  user_query = payload.get('query', '')
+  advanced_search = payload.get('advanced', False)
 
-match_result = re.search(search, data, re.IGNORECASE)
-if match_result:
-  print(f"Match found: {match_result.group()}")
-else:
-  print("No match found.")
+  if not advanced_search:
+    search = re.escape(user_query)
+  else:
+    search = user_query
+
+  match_result = re.search(search, datapool, re.IGNORECASE)
+  if match_result:
+    return jsonify({"status": "found", "match": match_result.group()})
+  else:
+    return jsonify("No match found.")
+
+if __name__ == '__main__':
+  app.run(debug=True, port=5000)
