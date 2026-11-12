@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page</title>
+    <title>Mind Extension UI</title>
+    <link rel="stylesheet" href="styling.css">
 </head>
+
 <body>
-    <h1>Hello, World!</h1>
+<div class="extension-container">
+    
+    <div class="header-container">
+        <img src="default-monochrome.svg" alt="NeuraDisk Logo" class="header-logo" draggable="false">
+    </div>
+    
+
+    <div class="card-wrapper">
+        <label for="searchBox" class="input-label">Search Query Token</label>
+        
+
+        <input type="text" id="searchBox" class="search-input" placeholder="Enter keywords or phrases...">
+        
+
+        <button id="searchBtn" class="action-button">Execute Scan</button>
+        <div id="resultBox" class="result-display hidden"></div>
+    </div>
+
+    <div class="tab-bar">
+        <button id="tab-categories" class="tab-btn">Custom Folders</button>
+    </div>
+    <script src="main.js"></script>
+</div>
 </body>
 </html>

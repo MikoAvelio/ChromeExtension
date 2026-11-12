@@ -1,0 +1,29 @@
+/* In CSS, it is used to customize the HTML blocks dynamically. */
+
+/* Example: */
+
+/* h1 {
+    color: red;
+    font-size: 2.5em;
+} */
+/* In this example, <h1> acts as the element that the rules below will style, in this case,
+all h1 text will be changed to the color red and have their font size be 2.5em.*/
+/* The curly braces are to group the elements to ensure no overlap between what is to be styled */
+
+/* Different CSS properties allow for different values. */
+/* A CSS sylesheet can contain many values written one after another */
+
+/* h1 {
+  color: red;
+  font-size: 2.5em;
+}
+
+p {
+  color: aqua;
+  padding: 5px;
+  background: midnightblue;
+} */
+
+/* <h1> changed h1 text, p changes sentences counter as paragraphs, color changes the color of the text,
+font size changes the size of the font, background changes the background color highlight of the text. */
+

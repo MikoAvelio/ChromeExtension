@@ -1,0 +1,8 @@
+<!-- JavaScript is a programming language that implements complex features inside a webpage. It can be interpreted as the, third layer of HTML and CSS. Where HTML is the skeleton, providing the barebones structure of the webpage, CSS builds the aesthetics of the webpage, and JavaScript creates the systems that gives it function. 
+On top of this, Javascript has its own tools called Application Programming Interfaces (or APIs). APIs act as code-ready building blocks that allow you to implement things that would be impossible to do from scratch.
+APIs refer to 2 different things:
+- Browser APIs
+- Third Party APIs
+Browser APIs are built into the web browser, and are able to take data from the surrounding computer environment.
+Third Party APIs are not build into the web browser, you would have to manually grab the API, through the web or whatever other way there is and implement it yourself.
+What JavaScript is actually doing in your browser in using your HTML and CSS inside a browser tab and acts like an interpretter, interpretting code to become your web page. A very common use for JavaScript is to modify and alter the HTML and CSS to update the user interface using the Document Model API, otherwise known as DOM, which is a browser API that allows you to llows you to manipulate HTML and CSS, creating, removing and changing HTML, dynamically applying new styles to your page, etc. -->
